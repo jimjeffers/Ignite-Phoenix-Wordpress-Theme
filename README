@@ -1,0 +1,4 @@
+This theme requires that you setup a few pages with custom permalinks in order to work properly. Review the index.php file to see what these pages are. Additionally there are several plugins you'll want to have installed in order for the theme to run without worry. These plugins are based off the existing deploy environment we're using. The plugins you need are as follows:
+
+TwitterTools(http://alexking.org/projects/wordpress)
+cForms(http://www.deliciousdays.com/cforms-plugin)
