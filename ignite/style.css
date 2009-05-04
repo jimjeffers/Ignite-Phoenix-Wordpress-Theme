@@ -1,0 +1,1303 @@
+/*   
+Theme Name: Ignite Phoenix
+Theme URI: http://ignite-phoenix.org
+Description: A wordpress theme for Ignite Phoenix
+Author: Jim Jeffers
+Author URI: http://donttrustthisguy.com
+Version: 1.0
+.
+Theme subject to copyright. Don't steal just learn. Be fair. Karma. Sort-of.
+.
+*/
+@import "reset.css";
+
+/*  KEEP OUR CSS CLEAN
+    Some guidelines to follow:
+    1. Break code down into sections.
+    2. Keep your rules alphabetically sorted.
+    3. Only put one selector per line for a block of rules that apply to multiple selectors.
+    4. Indent your rules, only one rule per line.
+        
+        example:
+        
+        element#id,
+        element.class {
+            rule1: value;
+            rule2: value;
+            top: value;
+        }
+*/
+
+/* =BODY
+   ------------------------------------------------------ */
+   body {
+      background: #cc4e4e url(images/background.gif) no-repeat top center fixed;
+      font: normal normal normal 1em/1.5em "Trebuchet MS", Trebuchet, Arial, sans-serif;
+   }
+
+
+/* =PRIMARY_NAVIGATION
+   ------------------------------------------------------ */
+   #primary_navigation {
+      background: rgba(0,0,0,.75);
+      display: block;
+      height: 70px;
+      left: 50%;
+      margin-left: -60px;
+      position: fixed;
+      right: 0;
+      top: 0;
+      z-index: 1000;
+   }
+   #primary_navigation li {
+      display: inline;
+   }
+   #primary_navigation li a {
+      background-color: rgba(0,0,0,.05);
+      display: inline-block;
+      padding: 30px 15px 20px 15px;
+      transition-property: background-color;
+      transition-duration: .25s;
+      -webkit-transition: background-color 0.25s linear;
+   }
+   
+   #primary_navigation li:hover a {
+      background-color: rgba(0,0,0,.5);
+   }
+   
+   #primary_navigation li.current a,
+   #blog li.blog a {
+      background: #fff;
+      border-bottom: 4px solid rgba(0,0,0,.25);
+      color: #000;
+      box-shadow: 5px 5px 0 rgba(0,0,13,0.25);
+      -webkit-box-shadow: 5px 5px 0 rgba(0,0,13,0.25);
+      -moz-box-shadow: 5px 5px 0 rgba(0,0,13,0.25);
+   }
+   
+   #primary_navigation li a {
+      color: #fff;
+      font-size: 1.5em;
+      line-height: 1em;
+      text-decoration: none;
+      text-transform: uppercase;
+   }
+   
+   #primary_navigation li.home {
+      left: 50%;
+      margin-left: -480px;
+      position: fixed;
+      top: 0;
+   }
+   
+   #primary_navigation li.home a,
+   #primary_navigation li.home a span {
+      background: transparent;
+      display: block;
+      overflow: hidden;
+      font-size: 0.875em;
+      padding: 0;
+      position: absolute;
+      height: 60px;
+      width: 60px;
+   }
+   
+   #primary_navigation li.home a span {
+      background: url(images/home_button.png) no-repeat;
+      left: 0;
+      top: 0;
+   }
+   
+   #primary_navigation li.blog {
+      position: relative;
+   }
+   
+   #primary_navigation li.blog ul.subnavigation li a {
+      font-size: 0.6em;
+   }
+   
+   #primary_navigation li ul.subnavigation {
+      background: rgba(0,0,0,.5);
+      left: -72px;
+      position: absolute;
+      top: 35px;
+      width: 160px;
+   }
+   
+   #primary_navigation li ul.subnavigation li,
+   #primary_navigation li ul.subnavigation li a {
+      position: relative;
+      margin: 4px 0;
+      width: 150px;
+   }
+   
+   #primary_navigation li ul.subnavigation li a {
+      padding: 5px;
+      height: auto;
+   }
+   
+/* =EVENT_PHOTOS
+   ------------------------------------------------------ */
+   ul#event_photos {
+      margin-bottom: 1em;
+      position: relative;
+   }
+   
+   ul#event_photos li {
+      margin-right: 20px;
+      overflow: hidden;
+      position: relative;
+      height: 160px;
+      width: 160px;
+      box-shadow: 5px 5px 0 rgba(0,0,13,0.25);
+      -webkit-box-shadow: 5px 5px 0 rgba(0,0,13,0.25);
+      -moz-box-shadow: 5px 5px 0 rgba(0,0,13,0.25);
+   }
+   ul#event_photos li a {
+      display: block;
+   }
+   
+   ul#event_photos li a span {
+      border: 10px solid rgba(255,255,255,.75);
+      display: block;
+      height: 140px;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 140px;
+   }
+   
+   ul#event_photos li a span:hover {
+      border-color: rgba(255,255,255,1);
+   }
+   
+   ul#event_photos li a img{
+      position: absolute;
+      left: -30px;
+   }
+   
+   ul#event_photos li#second_event_photo,
+   ul#event_photos li#third_event_photo {
+      position: absolute;
+      left: 180px;
+      top: 0;
+   }
+   
+   ul#event_photos li#second_event_photo {
+      width: 100px;
+   }
+   
+   ul#event_photos li#second_event_photo span {
+      width: 80px;
+   }
+   
+   ul#event_photos li#third_event_photo {
+      left: 300px;
+   }
+
+/* =SHORTCUTS_NAV
+   ------------------------------------------------------ */
+   ul.shortcuts_nav {
+      margin: 1em 0;
+   }
+   
+   ul.shortcuts_nav li a {
+      background: url(images/right_arrow_button.png) no-repeat center right;
+      border-top: 1px dotted rgba(0,0,0,.25);
+      color: rgba(255,255,255,.75);
+      display: block;
+      font-weight: bold;
+      padding: .5em 0;
+      transition-property: color;
+      transition-duration: .25s;
+      -webkit-transition: color 0.25s linear;
+   }
+   
+   ul.shortcuts_nav li a:hover {
+      color: rgba(255,255,255,1);
+   }
+
+/* =OPTIONS
+   ------------------------------------------------------ */
+   ul#options {
+      margin: 0.5em 0 0.75em 0;
+      padding-bottom: 0.5em;
+   }
+   
+   li#submit_your_idea a {
+      display: block;
+      height: 39px;
+      width: 389px;
+      padding: 10px;
+      position: relative;
+   }
+   
+   li#submit_your_idea a span {
+      background: url(images/submit_idea_button.png) no-repeat;
+      display: block;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+   }
+   
+/* =LOGO
+   ------------------------------------------------------ */
+   #logo {
+      display: block;
+      height: 261px;
+      position: absolute;
+      margin-right: 70px;
+      right: 50%;
+      top: 100px;
+      width: 50%;
+   }
+   
+   #logo span {
+      background: url(images/ignite_logo.png) no-repeat top right;
+      display: block;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+   }
+
+/* =INTRO_TEXT
+   ------------------------------------------------------ */
+   #intro {
+      left: 50%;
+      position: absolute;
+      top: 100px;
+      width: 460px;
+   }
+   
+   #intro p:first-child:first-letter,
+   .intro p:first-child:first-letter {
+      background: #000;
+      color: #fff;
+      display: block;
+      float: left;
+      font-size: 2em;
+      text-align: center;
+      padding: .5em;
+      margin: 0.25em 0.25em 0.25em 0;
+   }
+   
+   #intro #sponsors {
+      background: rgba(255,255,255,0.25);
+      display: block;
+      overflow: hidden;
+      height: 175px;
+      padding: 10px;
+      position: absolute;
+      top: 510px;
+      left: -290px;
+      width: 250px;
+      box-shadow: 5px 5px 0 rgba(0,0,13,0.25);
+      -webkit-box-shadow: 5px 5px 0 rgba(0,0,13,0.25);
+      -moz-box-shadow: 5px 5px 0 rgba(0,0,13,0.25);
+   }
+   
+   #intro #sponsors li, #intro #sponsors li img, #intro #sponsors li a {
+      display: block;
+   }
+   
+   #intro #sponsors br {
+      display: none;
+   } 
+   
+   p strong {
+      background: rgba(255,255,255,.1);
+   }
+   
+/* =EVENT_INFO
+   ------------------------------------------------------ */
+   #event_info {
+      margin-left: -480px;
+      left: 50%;
+      position: absolute;
+      text-align: right;
+      top: 400px;
+      width: 400px;
+   }
+   
+   #event_info .url {
+      background: url(images/rsvp_button_smaller.png) no-repeat right bottom;
+      color: #fff;
+      display: block;
+      font-size: 2em;
+      line-height: 1.1em;
+      padding-bottom: 40px;
+      text-decoration: none;
+   }
+   
+   #event_info .location {
+      color: #712b2b;
+      display: block;
+      font-size: 0.9em;
+   }
+   
+   #event_info .summary, #event_info .tags, #event_info .description {
+      display: none;
+   }
+ 
+/* =ABOUT
+   ------------------------------------------------------ */
+   #about {
+      position: absolute;
+      top: 600px;
+      width: 100%;
+   }
+   
+   #about .intro {
+      margin: 0 auto;
+      padding-top: 100px;
+      padding-right: 560px;
+      width: 400px;
+   }
+   
+   #about #the_event {
+      background: rgba(0,0,0,.25);
+      left: 50%;
+      margin-left: -60px;
+      padding: 10px;
+      position: absolute;
+      top: 600px;
+      width: 500px;
+   }
+   
+   #about h3 {
+      background: #000;
+      color: #fff;
+      display: inline-block;
+      margin: 0.5em 0 1em 0;
+      padding: 4px;
+      box-shadow: 5px 5px 0 rgba(0,0,13,0.25);
+      -webkit-box-shadow: 5px 5px 0 rgba(0,0,13,0.25);
+      -moz-box-shadow: 5px 5px 0 rgba(0,0,13,0.25);
+   }
+   
+   #about p {
+      margin: 0.5em 0;
+   }
+   
+   #about #number_of_minutes {
+      top: 350px;
+   }
+   
+   #about #number_of_presenters {
+      top: 475px;
+   }
+   
+   #about #number_of_slides {
+      top: 225px;
+   }
+   
+   #about h3.big_and_bold {
+      margin: 0;
+   }
+   
+   #about #the_event li {
+      border-bottom: 1px dotted rgba(0,0,0,.25);
+      display: block;
+      padding: 5px;
+   }
+   
+   #about #the_event li strong {
+      background: rgba(0,0,0,.75);
+      color: #fff;
+      display: inline-block;
+      padding: 0.25em;
+   }
+     
+/* =VENUE
+   ------------------------------------------------------ */
+   #venue {
+      background: url(images/tempe_center.png) no-repeat center bottom;
+      height: 800px;
+      position: absolute;
+      top: 2100px;
+      width: 100%;
+   }
+   
+   #venue .vcard {
+      color: #fff;
+      font-size: 1.25em;
+      left: 50%;
+      line-height: 1.5em;
+      margin-left: -480px;
+      position: absolute;
+      text-align: right;
+      top: 250px;
+      width: 400px;
+   }
+   #venue .vcard * {
+      display: inline;
+   }
+   
+   #venue .vcard .url {
+      color: #fff;
+      display: block;
+      font-size: 1.5em;
+      font-weight: bold;
+      text-decoration: none;
+   }
+   
+   #venue .vcard .street-address {
+      display: block;
+   }
+   
+   #venue .vcard .org, #venue .vcard .country-name {
+      display: none;
+   }
+   
+   #venue .vcard #map_to_venue {
+      bottom: -60px;
+      display: block;
+      height: 21px;
+      overflow: hidden;
+      padding: 10px;
+      position: absolute;
+      right: 0;
+      width: 80px;
+   }
+   
+   #venue #venue_description {
+      left:50%;
+      position:absolute;
+      top:100px;
+      width:460px;
+   }
+   
+   #venue .vcard #map_to_venue span {
+      background: url(images/map_button_small.png) no-repeat;
+      display: block;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+   }
+   
+   
+/* =RULES
+   ------------------------------------------------------ */
+   #rules {
+      padding-top: 250px;
+      position: absolute;
+      top: 2800px;
+      width: 100%;
+   }
+   
+   #rules #rules_of_ignite {
+      margin: 0 auto;
+      padding-left: 20px;
+      font-size: 0.875em;
+      line-height: 1.5em;
+      width: 980px;
+   }
+   
+   #rules .event_rule {
+      float: left;
+      margin-right: 20px;
+      min-height: 475px;
+      width: 220px;
+   }
+   
+   #rules .event_rule h3,
+   #primaryContent .entry-content h3 {
+      background: #000;
+      color: #fff;
+      float: left;
+      margin: 0.25em 0.5em 0.25em 0;
+      padding: 0.5em;
+      box-shadow: 5px 5px 0 rgba(0,0,13,0.25);
+      -webkit-box-shadow: 5px 5px 0 rgba(0,0,13,0.25);
+      -moz-box-shadow: 5px 5px 0 rgba(0,0,13,0.25);
+   }
+   
+   #rules .event_rule p{
+      clear: both;
+   }
+
+/* =IDEAS
+   ------------------------------------------------------ */
+   #ideas {
+      position: absolute;
+      top: 3900px;
+      width: 100%;
+   }
+   
+   #ideas #submission_directions {
+      left:50%;
+      position:absolute;
+      top:100px;
+      width:460px;
+   }
+   
+   #ideas #submission_directions p {
+      margin-bottom: 1em;
+   }
+   
+   #ideas #submission_directions ul li,
+   #point_of_it_all ul li {
+      background: #000;
+      color: #fff;
+      margin: 0.5em;
+      padding: 0.5em;
+      box-shadow: 5px 5px 0 rgba(0,0,13,0.25);
+      -webkit-box-shadow: 5px 5px 0 rgba(0,0,13,0.25);
+      -moz-box-shadow: 5px 5px 0 rgba(0,0,13,0.25);
+   }
+   
+   #point_of_it_all ul li {
+      background: rgba(255,255,255,0.5);
+      color: #000;
+      font-size: 0.75em;
+      line-height: 1.25em;
+   }
+   
+   #commentform,
+   #submission_form {
+      left: 50%;
+      margin-left: -480px;
+      position: absolute;
+      top: 250px;
+      width: 400px;
+   }
+   
+   #commentform input#submit,
+   #submission_form legend,
+   #sendbutton {
+      background: #000;
+      color: #fff;
+      display: inline-block;
+      margin: 0.25em 0.5em 0.25em 0;
+      padding: 0.5em;
+      box-shadow: 5px 5px 0 rgba(0,0,13,0.25);
+      -webkit-box-shadow: 5px 5px 0 rgba(0,0,13,0.25);
+      -moz-box-shadow: 5px 5px 0 rgba(0,0,13,0.25);
+   }
+   
+   #commentform ul li,
+   #submission_form ol li {
+      border-bottom: 1px dotted rgba(0,0,0,.25);
+      display: block;
+      padding: 0.5em 0;
+   }
+   
+   #commentform label,
+   #submission_form label {
+      display: block;
+      font-weight: bold;
+   }
+   
+   #commentform li input,
+   #commentform li textarea,
+   #submission_form  li input,
+   #submission_form  li textarea {
+      background: rgba(255,255,255,0.75);
+      border: 1px solid #712B2B;
+      display: block;
+      font-size: 1em;
+      line-height: 1.25em;
+      margin: 0.25em 0;
+      padding: 0.25em;
+      width: 330px;
+   }
+   
+   #commentform li input[type="hidden"] {
+      display: none;
+   }
+   
+   #submission_form  li textarea {
+      width: 390px;
+   }
+   
+   #submission_form .cf_hidden, 
+   #submission_form .linklove {
+      display: none;
+   }
+   
+   #submission_form #sendbutton {
+      border: none;
+      font-size: 1.25em;
+   }
+   
+   #lineup,
+   #submissions {
+      margin: 0 auto;
+      padding-top: 1150px;
+      width: 960px;
+   }
+   
+   #lineup h3,
+   #submissions h3 {
+      border-bottom: 1px solid #000;
+      font-size: 2em;
+      line-height: 1.25em;
+      padding: 0.5em 0;
+   }
+   
+   #lineup div.submission,
+   #submissions div.submission {
+      background: #fff;
+      float: left;
+      margin: 20px 20px 0 0;
+      padding: 10px;
+      width: 200px;
+      box-shadow: 5px 5px 0 rgba(0,0,13,0.25);
+      -webkit-box-shadow: 5px 5px 0 rgba(0,0,13,0.25);
+      -moz-box-shadow: 5px 5px 0 rgba(0,0,13,0.25);
+   }
+   
+   #lineup div.submission h3,
+   #submissions div.submission h3 {
+      font-size: 1.25em;
+      margin-bottom: 10px;
+   }
+   
+   #lineup div.submission dt,
+   #submissions div.submission dt {
+      background: #000;
+      color: #fff;
+      display: inline-block;
+      padding: 0.15em;
+      box-shadow: 3px 3px 0 rgba(0,0,13,0.15);
+      -webkit-box-shadow: 3px 3px 0 rgba(0,0,13,0.15);
+      -moz-box-shadow: 3px 3px 0 rgba(0,0,13,0.15);
+   }
+   
+   #lineup div.submission dl,
+   #submissions div.submission dl {
+      font-size: 0.75em;
+      line-height: 1.5em;
+   }
+   
+   #lineup div.submission a,
+   #submissions div.submission a {
+      background: rgba(0,0,0,.1);
+      color: #000;
+      display: inline-block;
+      padding: 0.25em;
+   }
+   
+   #lineup div.submission dd,
+   #submissions div.submission dd {
+      margin: 5px 0 10px 0;
+   }
+   
+/* =HEADERS
+   ------------------------------------------------------ */
+   .section h2,
+   h2#section,
+   #about h3.big_and_bold {
+      background: url(images/heading_background_left-trans.png) no-repeat top right;
+      color: #000;
+      display: block;
+      font-size: 3em;
+      height: 80px;
+      left: 0;
+      line-height: 1.2em;
+      margin-right: 70px;
+      padding: 20px;
+      position: absolute;
+      right: 50%;
+      text-align: right;
+      text-transform: uppercase;
+      top: 100px;
+      box-shadow: none;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+   }
+   
+   #about h2,
+   #rules h2,
+   #about h3.big_and_bold,
+   h2#section {
+      background: url(images/heading_background_right-trans.png) no-repeat top left;
+      left: 50%;
+      margin-left: -70px;
+      margin-right: 0;
+      right: 0;
+      text-align: left;
+   }
+   
+   h3.big_and_bold strong {
+      background: #000;
+      color: #fff;
+      display: block;
+      float: left;
+      padding: 0.25em;
+      margin: -0.25em 0.35em 0 0;
+      box-shadow: 5px 5px 0 rgba(0,0,13,0.25);
+      -webkit-box-shadow: 5px 5px 0 rgba(0,0,13,0.25);
+      -moz-box-shadow: 5px 5px 0 rgba(0,0,13,0.25);
+   }
+
+/* =FRAME
+   ------------------------------------------------------ */
+   span.frame {
+      background: rgba(0,0,0,.15);
+      display: block;
+      position: fixed;
+   }
+   
+   span.frame.bottom,
+   span.frame.top {
+      bottom: 0;
+      height: 10px;
+      width: 100%;
+   }
+   
+   span.top {
+      bottom: auto;
+      top: 0;
+   }
+   
+   span.left,
+   span.frame.right {
+      bottom: 10px;
+      left: 0;
+      width: 10px;
+      top: 10px;
+   }
+   
+   span.frame.right {
+      left: auto;
+      right: 0;
+   }
+
+/* =BLOG
+   ------------------------------------------------------ */
+   #primaryContent {
+      margin: 0 auto;
+      padding: 140px 0 140px 480px;
+      position: relative;
+      width: 480px;
+   }
+   
+   #primaryContent h2.entry-title,
+   #primaryContent h3.entry-title {
+      background: rgba(255,255,255,0.75);
+      display: inline;
+      padding: 0.5em 0.25em;
+      font-size: 1.5em;
+      font-weight: bold;
+      line-height: 2em;
+   }
+   
+   h2.entry-title a,
+   h3.entry-title a {
+      color: #000;
+      text-decoration: none;
+   }
+   
+   .archive {
+      border-bottom: 1px solid rgba(0,0,0,.25);
+      padding: 1em 0;
+   }
+   
+   #primaryContent div.entry-content {
+      margin: 1em 0;
+   }
+   
+   #primaryContent div.entry-content p {
+      padding: 0.5em 0;
+   }
+   
+   #primaryContent div.entry-content p a {
+      display: inline;
+      background: rgba(0,0,0,0.1);
+      color: #fff;
+      font-weight: bold;
+   }
+   
+   #primaryContent ul.post-info {
+      margin-top: 1em;
+   }
+   
+   #primaryContent ul.post-info li.date {
+      position: absolute;
+      top: 100px;
+      left: 480px;
+   }
+   
+   #primaryContent.archive-feed ul.post-info li.date {
+      position: relative;
+      top: 0;
+      left: 0;
+   }
+   
+   #primaryContent ul.post-info *,
+   #primaryContent ul.post-info li.contact,
+   #primaryContent ul.post-info li.contact a, 
+   #primaryContent ul.post-info li.respond,
+   #primaryContent ul.post-info li.respond a{
+      color: #000;
+      display: inline-block;
+      font-style: normal;
+   }
+   
+   #primaryContent.archive-feed ul.post-info, #primaryContent.archive-feed ul.post-info * {
+      display: inline;
+   }
+   
+   #primaryContent ul.post-info li.respond a {
+      background: url(images/chat_bubble_smaller-trans.png) no-repeat 6px center;
+      border-left: 1px solid #000;
+      margin-left: 0.25em;
+      padding-left: 30px;
+   }
+   #primaryContent ul.post-info li.date a {
+      background: #000;
+      color: #fff;
+      display: inline-block;
+      padding: 0.25em;
+      text-decoration: none;
+   }
+   
+   #primaryContent ul.post-info li.date a abbr {
+      color: #fff;
+   }
+   
+   #primaryContent div.meta {
+      background: rgba(0,0,0,0.25);
+      color: #000;
+      font-size: 0.75em;
+      line-height: 1.5em;
+      padding: 1em;
+   }
+   
+   #primaryContent div.meta * {
+      display: inline;
+   }
+   
+   #primaryContent div.meta a {
+      background: #000;
+      color: #fff;
+      padding: 0.1em;
+   }
+   
+   #primaryContent div.meta h3,
+   #primaryContent div.meta h4 {
+      background: #fff;
+      color: #000;
+   }
+   
+   #primaryContent #comments {
+      border-bottom: 1px solid #000;
+      font-size: 2em;
+      line-height: 1.5em;
+      margin-left: -480px;
+      padding: 0.5em 0;
+      width: 960px;
+   }
+   
+   #comment_content {
+      margin-left: -480px;
+      width: 960px;
+   }
+   
+   #commentform {
+      float: left;
+      margin-top: 70px;
+      position: relative;
+      top: 0;
+   }
+   
+   #commentform,
+   #commentform li textarea,
+   #commentform li input {
+      width: 230px;
+   }
+   
+   #commentform li input[type="hidden"] {
+      display: none;
+   }
+   
+   #commentform li label {
+      font-size: 0.75em;
+      line-height: 1.5em;
+   }
+   
+   .commentlist {
+      float: left;
+      padding-bottom: 60px;
+      width: 720px;
+   }
+   
+   li.comment {
+      background: #fff;
+      color: #000;
+      float: left;
+      margin-right: 20px;
+      margin-top: 70px;
+      padding: 10px;
+      position: relative;
+      width: 200px;
+   }
+   
+   li.comment .entry-content p a {
+      color: #000 !important;
+   }
+   
+   li.comment .entry-content {
+      font-size: 0.875em;
+      line-height: 1.5em;
+   }
+   
+   li.comment .entry-content blockquote {
+      background: rgba(0,0,0,.1);
+      font-size: 0.875em;
+      line-height: 1.25em;
+      padding: 5px;
+   }
+   
+   .current-comment {
+      border-top: 6px solid #000;
+      padding-top: 4px !important;
+      border-left: 6px solid #000;
+      padding-left: 4px !important;
+   }
+   
+   li.long-comment {
+      width: 440px;
+   }
+   
+   li.comment .author a {
+      background: #000;
+      color: #fff;
+      display: inline-block;
+      padding: 0.25em;
+      box-shadow: 5px 5px 0 rgba(0,0,13,0.25);
+      -webkit-box-shadow: 5px 5px 0 rgba(0,0,13,0.25);
+      -moz-box-shadow: 5px 5px 0 rgba(0,0,13,0.25);
+   }
+   
+   li.comment .artifact {
+      background: url(images/chat_bubble_arrow-trans.png) no-repeat;
+      bottom: -54px;
+      display: block;
+      right: 20px;
+      position: absolute;
+      height: 61px;
+      width: 54px;
+   }
+   
+   li.comment .entry-permalink {
+      text-decoration: none;
+   }
+   
+   li.comment abbr.published {
+      background: rgba(0,0,0,.1);
+      color: #000;
+      display: inline-block;
+      font-size: 0.75em;
+      line-height: 1.25em;
+      padding: 0.2em 0.25em;
+   }
+
+   ul#recentPosts {
+      border-top: 1px solid rgba(0,0,0,0.25);
+      left: 50%;
+      margin-left: -420px;
+      padding: 10px 0;
+      position: absolute;
+      top: 550px;
+      width: 340px;
+   }
+   
+   ul#recentPosts li a {
+      background: rgba(0,0,0,.25);
+      color: #fff;
+      display: block;
+      padding: 0.2em;
+      margin: 0.25em 0;
+      text-align: right;
+   }
+
+   .archive-feed {
+      margin-top: 100px !important;
+   }
+
+/* =FOOTER
+   ------------------------------------------------------ */
+   
+   div#footer {
+      background: #666 url(images/footer_background.png) repeat-x;
+      clear: both;
+      min-height: 275px;
+      position: relative;
+   }
+   
+   div#footer #city_artifact {
+      background: url(images/phoenix_transparent-trans.png) no-repeat;
+      bottom: 60px;
+      display: block;
+      height: 89px;
+      position: absolute;
+      left: 50%;
+      margin-left: -312px;
+      width: 615px;
+   }
+   
+   #home #footer {
+      top: 6000px;
+      position: absolute;
+      width: 100%;
+   }
+   
+   #lists {
+      margin: 10px auto;
+      width: 960px;
+   }
+   
+   #lists .aktt_tweets,
+   #lists ul.blog_list {
+      float: left;
+      font-size: 0.75em;
+      line-height: 1.5em;
+      margin-right: 20px;
+      width: 160px;
+   }
+   
+   #lists h3 {
+      background: rgba(255,255,255,.75);
+      color: #000;
+      display: block;
+      font-size: 1.15em;
+      line-height: 1.5em;
+      margin: 0.75em 0;
+      padding: 0.25em;
+      box-shadow: 5px 5px 0 rgba(0,0,13,0.25);
+      -webkit-box-shadow: 5px 5px 0 rgba(0,0,13,0.25);
+      -moz-box-shadow: 5px 5px 0 rgba(0,0,13,0.25);
+   }
+   
+   #lists .aktt_tweets li,
+   #lists ul.blog_list li {
+      border-top: 1px solid rgba(0,0,0,.1);
+      padding: 0.5em 0;
+   }
+   
+   #lists .aktt_tweets li a,
+   #lists ul.blog_list li a,
+   #credits a {
+      background: rgba(0,0,0,.25);
+      color: #fff;
+      font-weight: bold;
+   }
+   
+   #closing_remarks {
+      clear: both;
+      height: 160px;
+      margin: 10px auto;
+      position: relative;
+      width: 960px;
+   }
+   
+   #credits {
+      background: rgba(0,0,0,.25);
+      bottom: 10px;
+      color: #fff;
+      display: block;
+      padding: 0.75em;
+      position: absolute;
+      font-size: 0.75em;
+      line-height: 1.5em;
+   }
+   
+/* =ENCOURAGED_COMMENTARY
+   ------------------------------------------------------ */
+   #comment-respond {
+      background: url(images/respond_button_smaller-trans.png) no-repeat;
+      display: block;
+      height: 32px;
+      text-indent: -9999px;
+      width: 100px;
+   }
+   
+   .comment-controls {
+      bottom: -30px;
+      left: 0;
+      position: absolute;
+   }
+   
+   .comment-controls a {
+      background: rgba(0,0,0,.5);
+      color: #fff;
+      display: inline-block;
+      font-size: 0.75em;
+      font-weight: bold;
+      margin: 0 0.25em 0 0;
+      padding: 0.1em 0.25em;
+   }
+   
+   /* Styles for the preview container. */
+   #encouraged-preview {
+      background: #fff;
+      color: #999;
+      display: none;
+      font-size: 0.875em;
+      line-height: 1.25em;
+      padding: 10px;
+      position: absolute;
+      width: 230px;
+   }
+
+   /* Alternate height for large comments. */
+   .extended {
+      height: 300px;
+   }
+
+   /* Kind of important if you are using the preview with or without the lightbox */
+   .encouraged-form {
+      position: relative;
+   }
+
+   /* This is to style the opt out of quoting button. */
+   #encouraged-comment-delete {
+      font-size: 1.15em;
+      font-weight: bold;
+   }
+
+   /* Lightbox Styles */
+   #comment-lightbox {
+      background: rgba(0,0,0,0.25);
+      height: 480px;
+      left: 50%;
+      margin-left: -400px;
+      margin-top: -240px;
+      overflow: hidden;
+      position: fixed;
+      top: 50%;
+      width: 800px;
+      z-index: 2001;
+   }
+   
+   #comment-lightbox #commentform {
+      width: 400px;
+   }
+   #comment-lightbox #commentform ul {
+      width: 390px;
+      padding: 0 5px;
+   }
+   
+   /* This layer is the fade behind the lightbox */
+   #comment-lightbox-background {
+      background: #000 url(images/ignite_streams_smaller-trans.png) no-repeat center center;
+      height: 100%;
+      left: 0;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 2000;
+   }
+
+   /* All of the work below here is to restyle the comment form when it is pulled into the lightbox. */
+   #comment-lightbox .encouraged-form {
+      background: rgba(0,0,0,.8);
+      height: 500px;
+      margin: 0 0 0 0;
+      left: 0;
+      top: 0;
+   }
+   
+   #comment-lightbox h3 {
+      background: rgba(0,0,0,.75);
+      color: #fff;
+      padding: 4px;
+   }
+
+   #comment-lightbox .encouraged-form label {
+      background: #000;
+      color: #fff;
+      display: inline-block;
+      font-size: 0.75em;
+      padding: 0.15em;
+   }
+
+   #comment-lightbox .encouraged-form #comment {
+      height: 125px;
+      width: 345px;
+   }
+
+   #comment-lightbox .encouraged-form #encouraged-preview {
+      background: rgba(0,0,0,.9);
+      display: block;
+      height: 440px;
+      left: 400px !important;
+      overflow: auto;
+      padding: 10px;
+      top: 30px;
+      width: 380px;
+   }
+   
+   #comment-lightbox .encouraged-form input {
+      margin: 0 !important;
+   }
+   
+   #comment-lightbox .encouraged-form #encouraged-preview p {
+      padding: 0.5em 0;
+   }
+   
+   #comment-lightbox .encouraged-form #encouraged-preview a {
+      color: #fff;
+   }
+   
+   #comment-lightbox .encouraged-form #encouraged-preview blockquote {
+      background: rgba(255,255,255,.05);
+      padding: 5px;
+      margin: 10px 0;
+   }
+
+   #comment-lightbox #encouraged-comment-delete {
+      background: rgba(0,0,0,.75);
+      color: #fff;
+      font-size: 0.9em;
+      left: 400px;
+      padding: 4px 5px 4px 5px;
+      position: absolute;
+      top: 0;
+      width: 350px;
+   }
+
+   /* This styling is applied to the close button that is automatically generated when the lightbox is called. */
+   #encouraged-comment-lightbox-toggle {
+      background: #000;
+      color: #fff;
+      display: block;
+      font-size: 0.875em;
+      right: 0;
+      position: absolute;
+      padding: 4px;
+      top: 0;
+   }
+   
+/* =GRID
+   ------------------------------------------------------ */
+   #grid {
+      background: rgba(255,255,255,0.1);
+      height: 100%;
+      left: 50%;
+      margin-left: -480px;
+      position: fixed;
+      top: 0;
+      width: 960px;
+      display: none;
+   }
+   
+   #grid li {
+      background: rgba(255,0,0,.25);
+      display: block;
+      height: 100%;
+      width: 40px;
+      float: left;
+      margin-right: 20px;
+   }
+   
+   #grid li:last {
+      margin-right: 0;
+   }

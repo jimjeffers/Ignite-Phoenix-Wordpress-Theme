@@ -1,0 +1,84 @@
+li.comment abbr.published,
+#primaryContent div.entry-content p a,
+#submissions div.submission a {
+   /*background: url(images/black_10-trans.png);*/
+   background: #000;
+}
+
+#about #the_event,
+#primaryContent div.meta,
+ul#recentPosts li a,
+#lists .aktt_tweets li a,
+#lists ul.blog_list li a,
+#credits a,
+#credits {   
+   /*background: url(images/black_25-trans.png);*/
+   background: #000;
+}
+
+#primaryContent div.meta,
+#about #the_event {
+   background: #983a3a;   
+}
+
+#primary_navigation li a,
+#primary_navigation li:hover a,
+#primary_navigation li ul.subnavigation,
+#primary_navigation li.blog a:hover,
+#primary_navigation li.blog a.active {
+   /*background: url(images/black_50-trans.png);*/
+   background: #000;
+}
+
+#primary_navigation,
+#about #the_event li strong {
+   /*background: url(images/black_75-trans.png);*/
+   background: #000;
+}
+
+p strong {
+   /*background: url(images/white_10-trans.png);*/
+   background: transparent;
+}
+
+#commentform li input,
+#commentform li textarea,
+#submission_form  li input,
+#submission_form  li textarea,
+#primaryContent h2.entry-title,
+#lists h3 {
+   /*background: url(images/white_75-trans.png);*/
+   background: #fff;
+}
+
+#submissions div.submission dd a,
+li.comment abbr.published {
+   color: #fff;
+}
+
+#primary_navigation,
+#primary_navigation li.home,
+#primary_navigation li.blog,
+#comment-lightbox,
+#comment-lightbox-background {
+   position: absolute;
+}
+
+span.frame {
+   display: none;
+}
+
+#venue { background-image: none; }
+
+#primary_navigation {
+   width: 600px;
+}
+
+#primaryContent ul.post-info li.date {
+   display: inline-block !important;
+   width: 400px;
+}
+
+li#submit_your_idea a span {
+   width: 430px;
+}

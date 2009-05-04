@@ -1,0 +1,121 @@
+#logo {
+   margin-right: 140px;
+}
+
+li.comment abbr.published,
+#primaryContent div.entry-content p a,
+#submissions div.submission a, {
+   background: url(images/black_10-trans.png);
+}
+
+#about #the_event,
+#primaryContent div.meta,
+ul#recentPosts li a,
+#lists .aktt_tweets li a,
+#lists ul.blog_list li a,
+#credits a,
+#credits,
+#comment-lightbox,
+#comment-lightbox .encouraged-form,
+#comment-lightbox .encouraged-form #encouraged-preview blockquote {   
+   background: url(images/black_25-trans.png);
+}
+
+#primary_navigation li:hover a,
+#primary_navigation li ul.subnavigation,
+#primary_navigation li.blog a:hover,
+#primary_navigation li.blog a.active,
+.comment-controls a,
+#comment-lightbox .encouraged-form #encouraged-preview {
+   background: url(images/black_50-trans.png);
+}
+
+#primary_navigation li.current a:hover,
+#blog #primary_navigation li.blog a:hover,
+#blog #primary_navigation li.blog a {
+   background: #fff !important;
+}
+
+#primary_navigation,
+#about #the_event li strong,
+#comment-lightbox h3,
+#comment-lightbox #encouraged-comment-delete {
+   background: url(images/black_75-trans.png);
+}
+
+p strong {
+   background: url(images/white_10-trans.png);
+}
+
+#commentform li input,
+#commentform li textarea,
+#submission_form  li input,
+#submission_form  li textarea,
+#primaryContent h2.entry-title,
+#sponsors,
+#lists h3 {
+   background: url(images/white_75-trans.png);
+}
+
+#point_of_it_all ul li,
+#primary_navigation li.current a {
+   border-bottom: 4px solid #000;
+}
+
+ul#event_photos li a span:hover {
+   border: 10px solid #fff;
+}
+
+ul.shortcuts_nav li a,
+ul.shortcuts_nav li a:hover {
+   border-top: 1px dotted #fff;
+   color: #fff;
+}
+
+#about #the_event li,
+.archive {
+   border-bottom: 1px dotted #000;
+}
+
+#commentform ul li,
+#submission_form ol li {
+   border-bottom: 1px dotted #000;
+}
+
+ul#recentPosts,
+#lists .aktt_tweets li,
+#lists ul.blog_list li {
+   border-top: 1px solid #000;
+}
+
+span.frame {
+   display: none;
+}
+
+#intro p:first-child:first-letter,
+.intro p:first-child:first-letter {
+   background: transparent;
+   font-size: 2em;
+   padding: 0.1em;
+}
+
+.archive-feed {
+   padding-top: 200px !important;
+}
+
+#primary_navigation li ul.subnavigation {
+   top: 70px;
+}
+
+#venue .vcard #map_to_venue span {
+   height: 100px;
+   width: 250px;
+}
+
+#primaryContent h2.entry-title, #primaryContent h3.entry-title  {
+   background: #fff;
+}
+
+ul.post-info * {
+   display: inline !important;
+}
