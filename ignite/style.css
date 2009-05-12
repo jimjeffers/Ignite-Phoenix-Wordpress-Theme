@@ -320,6 +320,7 @@ Theme subject to copyright. Don't steal just learn. Be fair. Karma. Sort-of.
       text-align: right;
       top: 400px;
       width: 400px;
+      z-index: 10;
    }
    
    #event_info .url {
@@ -509,7 +510,7 @@ Theme subject to copyright. Don't steal just learn. Be fair. Karma. Sort-of.
    #primaryContent .entry-content h3 {
       background: #000;
       color: #fff;
-      float: left;
+      display: inline-block;
       margin: 0.25em 0.5em 0.25em 0;
       padding: 0.5em;
       box-shadow: 5px 5px 0 rgba(0,0,13,0.25);
@@ -569,6 +570,7 @@ Theme subject to copyright. Don't steal just learn. Be fair. Karma. Sort-of.
    
    #commentform input#submit,
    #submission_form legend,
+   .cform legend,
    #sendbutton {
       background: #000;
       color: #fff;
@@ -581,14 +583,16 @@ Theme subject to copyright. Don't steal just learn. Be fair. Karma. Sort-of.
    }
    
    #commentform ul li,
-   #submission_form ol li {
+   #submission_form ol li,
+   .cform ol li {
       border-bottom: 1px dotted rgba(0,0,0,.25);
       display: block;
       padding: 0.5em 0;
    }
    
    #commentform label,
-   #submission_form label {
+   #submission_form label, 
+   .cform label {
       display: block;
       font-weight: bold;
    }
@@ -596,7 +600,9 @@ Theme subject to copyright. Don't steal just learn. Be fair. Karma. Sort-of.
    #commentform li input,
    #commentform li textarea,
    #submission_form  li input,
-   #submission_form  li textarea {
+   #submission_form  li textarea,
+   .cform li input,
+   .cform li textarea {
       background: rgba(255,255,255,0.75);
       border: 1px solid #712B2B;
       display: block;
@@ -615,12 +621,12 @@ Theme subject to copyright. Don't steal just learn. Be fair. Karma. Sort-of.
       width: 390px;
    }
    
-   #submission_form .cf_hidden, 
-   #submission_form .linklove {
+   .cform .cf_hidden, 
+   .linklove {
       display: none;
    }
    
-   #submission_form #sendbutton {
+   .cform #sendbutton {
       border: none;
       font-size: 1.25em;
    }
@@ -814,8 +820,29 @@ Theme subject to copyright. Don't steal just learn. Be fair. Karma. Sort-of.
       font-weight: bold;
    }
    
-   #primaryContent ul.post-info {
-      margin-top: 1em;
+   #primaryContent div.entry-content ul,
+   #primaryContent div.entry-content ol,
+   #primaryContent div.entry-content blockquote,
+   #primaryContent div.entry-content pre  {
+      font-size: 0.875em;
+      line-height: 1.15em;
+      list-style: square outside;
+      margin: 0.5em 2em;
+   }
+   
+   #primaryContent div.entry-content cite {
+      display: block;
+      font-size: 0.875em;
+      font-weight: bold;
+   }
+   
+   #primaryContent div.entry-content ol {
+      list-style: decimal outside;
+   }
+   
+   #primaryContent div.entry-content abbr {
+      font-style: italic;
+      text-decoration: overline underline;
    }
    
    #primaryContent ul.post-info li.date {
